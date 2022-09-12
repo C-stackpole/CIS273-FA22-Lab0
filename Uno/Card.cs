@@ -40,6 +40,10 @@ namespace Uno
 			{
 				return false;
 			}
+			if(card1.Color == card2.Color || card1.Number == card2.Number || card1.Type == card2.Type)
+			{
+				return true;
+			}
 
 			return true;
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Xml.Schema;
+
 namespace Vector
 {
 	public struct Vector
@@ -40,17 +42,24 @@ namespace Vector
 
 		public Vector Subtract(Vector v)
 		{
-			return new Vector();
+			Vector result = new Vector(this.X - v.X, this.Y - v.Y);
+
+			return result;
 		}
 
 		public double Dot(Vector v)
 		{
-			return 0.0;
+			Vector result = new Vector(this.X * v.X, this.Y * v.Y);
+
+			return result.Magnitude;
 		}
 
-		public double AngleBetween(Vector v)
+        public double AngleBetween(Vector v)
 		{
-			return 0.0;
+			Vector result = this.Add(v);
+            double mag = result.Magnitude;
+			double angle = Math.Asin(result.Y / mag)*180/Math.PI;
+			return angle;
 		}
 
 		public override string ToString()

@@ -15,7 +15,7 @@ namespace Uno
 
         public bool HasPlayableCard(Card card)
 		{
-			return false;
+			
 		}
 
         public Card GetFirstPlayableCard(Card card)
@@ -25,7 +25,14 @@ namespace Uno
 
         public Color MostCommonColor()
 		{
-			return Color.Blue;
+			int red = 0;
+            int yellow = 0;
+            int blue = 0;
+            int green = 0;
+			foreach (card in Hand){
+
+			}
+            return Color.Blue;
 		}
 
 
